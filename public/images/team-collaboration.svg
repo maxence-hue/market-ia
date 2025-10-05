@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Collaboration Market-IA</title>
+  <desc id="desc">Illustration minimaliste représentant des professionnels collaborant avec l'intelligence artificielle.</desc>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+    <linearGradient id="human" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9fafb" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </linearGradient>
+    <linearGradient id="ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="32" fill="url(#gradient)" />
+  <g transform="translate(140 120)">
+    <rect x="0" y="40" width="340" height="240" rx="32" fill="url(#human)" opacity="0.95" />
+    <rect x="260" y="0" width="360" height="280" rx="40" fill="url(#ai)" opacity="0.88" />
+    <rect x="140" y="220" width="420" height="120" rx="28" fill="#0f172a" opacity="0.35" />
+    <g fill="#0f172a">
+      <circle cx="120" cy="120" r="36" opacity="0.75" />
+      <rect x="104" y="160" width="32" height="68" rx="12" opacity="0.75" />
+      <circle cx="300" cy="100" r="48" opacity="0.6" />
+      <rect x="282" y="152" width="36" height="96" rx="14" opacity="0.6" />
+      <circle cx="440" cy="132" r="42" opacity="0.45" />
+      <rect x="424" y="176" width="32" height="80" rx="12" opacity="0.45" />
+    </g>
+    <g transform="translate(40 40)" fill="#1f2937" font-family="'Inter','Segoe UI',sans-serif">
+      <text x="0" y="24" font-size="24" font-weight="600">Brief stratégique</text>
+      <text x="0" y="52" font-size="16" opacity="0.7">Ateliers humains & analyse marché</text>
+    </g>
+    <g transform="translate(320 32)" fill="#1f2937" font-family="'Inter','Segoe UI',sans-serif">
+      <text x="0" y="24" font-size="24" font-weight="600">Copilotage IA</text>
+      <text x="0" y="52" font-size="16" opacity="0.7">Automations, insights & testing</text>
+    </g>
+  </g>
+  <g transform="translate(160 420)" fill="#ecfeff" opacity="0.45">
+    <circle cx="0" cy="0" r="10" />
+    <circle cx="48" cy="-6" r="8" />
+    <circle cx="96" cy="4" r="6" />
+    <circle cx="144" cy="-2" r="9" />
+    <circle cx="192" cy="6" r="7" />
+    <circle cx="240" cy="-4" r="11" />
+  </g>
+</svg>

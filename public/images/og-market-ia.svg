@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Market-IA Aperçu</title>
+  <desc id="desc">Illustration abstraite représentant la collaboration entre humains et intelligence artificielle.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="circle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#cbd5f5" stop-opacity="0.75" />
+    </linearGradient>
+    <linearGradient id="signal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="1200" height="630" rx="48" />
+  <g transform="translate(200 120)">
+    <circle cx="160" cy="160" r="140" fill="url(#circle)" opacity="0.9" />
+    <circle cx="420" cy="160" r="120" fill="#bfdbfe" opacity="0.75" />
+    <circle cx="660" cy="140" r="150" fill="#1e293b" opacity="0.35" />
+    <rect x="80" y="260" width="560" height="60" rx="30" fill="#0f172a" opacity="0.35" />
+    <rect x="140" y="320" width="440" height="32" rx="16" fill="url(#signal)" opacity="0.9" />
+    <g fill="#f8fafc" font-family="'Inter', 'Segoe UI', sans-serif">
+      <text x="10" y="30" font-size="64" font-weight="600">Market-IA</text>
+      <text x="12" y="90" font-size="28" opacity="0.85">Humain + IA pour un marketing plus rapide</text>
+    </g>
+  </g>
+  <g transform="translate(180 440)" fill="#e0f2fe" opacity="0.5">
+    <circle cx="0" cy="0" r="10" />
+    <circle cx="60" cy="10" r="8" />
+    <circle cx="120" cy="-6" r="12" />
+    <circle cx="180" cy="8" r="9" />
+    <circle cx="240" cy="-4" r="7" />
+    <circle cx="300" cy="6" r="11" />
+  </g>
+</svg>
