@@ -30,24 +30,39 @@ export const navigation = {
   ],
   services: [
     {
-      name: 'Stratégie de contenu IA-assistée',
-      description: 'Audits, guidelines éditoriales et calendars orchestrés avec l’IA.',
-      href: '/services/strategie-contenu-ia-assistee',
+      name: 'Site web évolutif 99€/mois',
+      description: 'Abonnement site vitrine/e-commerce avec retouches illimitées.',
+      href: '/services/site-web-evolutif-ia',
     },
     {
-      name: 'Production SEO multilocale',
-      description: 'Pages localisées et optimisées SEO pour accélérer votre visibilité.',
-      href: '/services/production-seo-multilocale',
+      name: 'Packs SEO hybrides',
+      description: '2 ou 4 articles premium / mois IA + rédacteur.',
+      href: '/services/packs-seo-contenu-hybride',
     },
     {
-      name: 'Social ads créatives IA-assistées',
-      description: 'Concepts créatifs et déclinaisons multi-formats générées avec copilotage IA.',
-      href: '/services/social-ads-creatives-ia-assistees',
+      name: 'Pilotage SEO augmenté',
+      description: 'Command center SEO technique + contenu à partir de 249€/mois.',
+      href: '/services/pilotage-seo-augmente',
+    },
+    {
+      name: 'Gestion social media IA',
+      description: 'Campagnes + optimisation dès 99€/mois avec créas IA retouchées.',
+      href: '/services/social-media-copilote-ia',
     },
     {
       name: 'Landing pages & CRO',
-      description: 'Conception et optimisation continue de landing pages pilotées par la data.',
+      description: 'Landing page 790€ + tracking conversions sur mesure.',
       href: '/services/landing-pages-cro',
+    },
+    {
+      name: 'Backlinks orchestrés',
+      description: 'Campagnes netlinking premium sur devis.',
+      href: '/services/acquisition-backlinks-orchestree',
+    },
+    {
+      name: 'Automatisations n8n',
+      description: 'Workflows marketing no-code inspirés des meilleurs du marché.',
+      href: '/services/automatisations-n8n-no-code',
     },
   ],
 };

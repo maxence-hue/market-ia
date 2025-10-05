@@ -7,6 +7,8 @@ export type Service = {
   title: string;
   excerpt: string;
   hero: string;
+  relatedTag?: string;
+  order?: number;
   benefits: { title: string; description: string }[];
   deliverables: string[];
   process: { title: string; description: string }[];
@@ -24,7 +26,18 @@ export async function getServiceSlugs() {
 export async function getServices(): Promise<Service[]> {
   const slugs = await getServiceSlugs();
   const services = await Promise.all(slugs.map((slug) => getService(slug)));
-  return services.sort((a, b) => a.title.localeCompare(b.title));
+  return services.sort((a, b) => {
+    if (typeof a.order === 'number' && typeof b.order === 'number') {
+      return a.order - b.order;
+    }
+    if (typeof a.order === 'number') {
+      return -1;
+    }
+    if (typeof b.order === 'number') {
+      return 1;
+    }
+    return a.title.localeCompare(b.title);
+  });
 }
 
 export async function getService(slug: string): Promise<Service> {
@@ -35,6 +48,8 @@ export async function getService(slug: string): Promise<Service> {
     title,
     excerpt,
     hero,
+    relatedTag,
+    order,
     benefits = [],
     deliverables = [],
     process = [],
@@ -46,6 +61,8 @@ export async function getService(slug: string): Promise<Service> {
     title,
     excerpt,
     hero,
+    relatedTag,
+    order,
     benefits,
     deliverables,
     process,

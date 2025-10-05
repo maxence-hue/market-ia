@@ -1,5 +1,6 @@
-import { Button } from './Button';
+import Link from 'next/link';
 import { Card } from './Card';
+import { clsx } from 'clsx';
 
 type PricingPlan = {
   name: string;
@@ -7,6 +8,9 @@ type PricingPlan = {
   description: string;
   features: string[];
   badge?: string;
+  billing?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 type PricingTableProps = {
@@ -30,7 +34,12 @@ export function PricingTable({ plans }: PricingTableProps) {
             <p className="mt-2 text-sm text-slate-300">{plan.description}</p>
             <p className="mt-6 text-3xl font-bold text-white">
               {plan.price}
-              <span className="ml-1 text-base font-medium text-slate-300">HT / mois</span>
+              {(() => {
+                const billingLabel = plan.billing ?? (plan.price.toLowerCase().includes('sur devis') ? '' : 'HT / mois');
+                return billingLabel ? (
+                  <span className="ml-1 text-base font-medium text-slate-300">{billingLabel}</span>
+                ) : null;
+              })()}
             </p>
             <ul className="mt-6 space-y-3 text-sm text-slate-200">
               {plan.features.map((feature) => (
@@ -41,9 +50,16 @@ export function PricingTable({ plans }: PricingTableProps) {
               ))}
             </ul>
           </div>
-          <Button className="mt-8 w-full" aria-label={`Demander un devis pour l'offre ${plan.name}`}>
-            Demander un devis
-          </Button>
+          <Link
+            href={plan.ctaHref ?? '/contact'}
+            aria-label={`Demander un devis pour l'offre ${plan.name}`}
+            className={clsx(
+              'mt-8 inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary/40 transition',
+              'hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary',
+            )}
+          >
+            {plan.ctaLabel ?? 'Demander un devis'}
+          </Link>
         </Card>
       ))}
     </div>

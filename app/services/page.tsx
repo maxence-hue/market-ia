@@ -12,7 +12,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata: Metadata = {
   title: 'Services IA marketing',
   description:
-    "Découvrez toutes les offres Market-IA : stratégie de contenu, SEO multilocal, social ads IA-assistées et optimisation de landing pages.",
+    'Découvrez nos abonnements site web, packs SEO hybrides, pilotage social media, automatisations n8n et campagnes de backlinks orchestrées.',
 };
 
 export default async function ServicesPage() {
@@ -43,7 +43,7 @@ export default async function ServicesPage() {
           <Badge variant="accent">Nos expertises</Badge>
           <h1 className="mt-4 text-4xl font-bold text-white">Services marketing augmentés par l’IA</h1>
           <p className="mt-4 text-base text-slate-300">
-            Des offres conçues pour accélérer chaque pilier de votre acquisition : stratégie, contenus, activation et conversion.
+            Des abonnements transparents : site web évolutif dès 99€ HT / mois, packs SEO hybrides, social media copilote, landing pages 790€ et automatisations n8n sur-mesure.
           </p>
         </Container>
       </Section>

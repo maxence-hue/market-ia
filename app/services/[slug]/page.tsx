@@ -8,7 +8,9 @@ import { Container } from '../../components/Container';
 import { Badge } from '../../components/Badge';
 import { Card } from '../../components/Card';
 import { FAQ } from '../../components/FAQ';
+import { BlogCard } from '../../components/BlogCard';
 import { getService, getServiceSlugs } from '@/lib/services';
+import { getAllBlogPosts } from '@/lib/mdx';
 import { siteConfig } from '@/lib/site';
 
 export async function generateStaticParams() {
@@ -38,6 +40,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
   if (!service) {
     notFound();
   }
+
+  const relatedPosts = service.relatedTag
+    ? (await getAllBlogPosts()).filter((post) => post.tags.includes(service.relatedTag!)).slice(0, 3)
+    : [];
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -112,6 +118,29 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </aside>
         </Container>
       </Section>
+      {relatedPosts.length > 0 ? (
+        <Section background="muted" className="pt-0">
+          <Container>
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <Badge variant="accent">Ressources</Badge>
+                <h2 className="mt-4 text-3xl font-bold text-white">Aller plus loin sur ce sujet</h2>
+                <p className="mt-2 text-base text-slate-300">
+                  Explorez nos analyses et retours d’expérience pour maximiser l’impact de cette offre.
+                </p>
+              </div>
+              <Link href="/blog" className="text-sm font-semibold text-accent hover:underline">
+                Voir tous les articles
+              </Link>
+            </div>
+            <div className="mt-10 grid gap-6 lg:grid-cols-3">
+              {relatedPosts.map((post) => (
+                <BlogCard key={post.slug} {...post} showTags={false} />
+              ))}
+            </div>
+          </Container>
+        </Section>
+      ) : null}
       <Script id={`service-${service.slug}-breadcrumb`} type="application/ld+json">
         {JSON.stringify(jsonLd)}
       </Script>

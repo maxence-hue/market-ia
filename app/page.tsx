@@ -20,11 +20,11 @@ const advantages = [
   },
   {
     title: 'Coût optimisé',
-    description: 'Des forfaits transparents pour investir là où la valeur est maximale.',
+    description: 'Site web évolutif 99€ HT / mois, packs SEO 69€ ou 99€, landing page 790€ : vous savez où va chaque euro.',
   },
   {
     title: 'Transparence totale',
-    description: 'Suivi temps réel, reporting et partage de prompts pour une collaboration claire.',
+    description: 'Retouches illimitées sous 48 h, reporting temps réel et accès à tous nos prompts et workflows.',
   },
 ];
 
@@ -82,7 +82,7 @@ export default async function HomePage() {
               Accélérez votre marketing avec l’alliance Humain + IA
             </h1>
             <p className="mt-6 text-lg text-slate-300">
-              La qualité d’une agence senior, la vitesse de l’IA, à tarif optimisé. Market-IA conçoit et pilote vos campagnes, contenus et expériences digitales avec des experts certifiés et des modèles IA sécurisés.
+              La qualité d’une agence senior, la vitesse de l’IA, à tarif optimisé. Abonnement site web dès 99€ HT / mois, packs SEO 69€ ou 99€, landing page 790€ : Market-IA conçoit et pilote vos campagnes avec des experts certifiés et des modèles IA sécurisés.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link

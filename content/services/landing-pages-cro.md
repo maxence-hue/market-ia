@@ -1,31 +1,52 @@
 ---
-title: "Landing pages & CRO"
-excerpt: "Concevez et optimisez des landing pages hautement convertissantes grâce aux insights IA et aux tests rapides."
-hero: "CRO + UX + IA"
+title: "Landing pages & CRO augmentés"
+excerpt: "Landing page clé en main à 790€ HT l’unité, +190€ HT pour la mise en place complète des mesures de conversion et dashboards."
+hero: "Landing page 790€"
+relatedTag: "service:landing-pages-cro"
+order: 5
 benefits:
-  - title: "Diagnostic complet"
-    description: "Audit UX, analytics et mapping des frictions clés de votre tunnel."
-  - title: "Hypothèses IA"
-    description: "L’IA génère variantes de messages, preuves et maquettes que nous priorisons avec vous."
-  - title: "Expérimentation rapide"
-    description: "Tests A/B, multivariés et personalisation orchestrés en cycle court."
+  - title: "Conversion d’abord"
+    description: "Copywriting IA entraîné sur vos personas + validation CRO humaine pour maximiser la conversion."
+  - title: "Tests rapides"
+    description: "A/B testing automatique sur titres, visuels et CTA via notre stack sans code."
+  - title: "Insights activables"
+    description: "Heatmaps, recordings et dashboards centralisés pour apprendre en continu."
 deliverables:
-  - "Audit CRO + recommandations"
-  - "Wireframes et maquettes IA-assisted"
-  - "Plan de tests et scripts d’expériences"
-  - "Rapports de performance"
+  - "Wireframe et maquette haute fidélité"
+  - "Copywriting persuasif + preuves sociales"
+  - "Intégration responsive (Next.js / Webflow)"
+  - "Plan de tracking conversions et événements"
 process:
-  - title: "Audit & priorisation"
-    description: "Analyse des données, heatmaps, interviews clients pour identifier les quick wins."
-  - title: "Design & copy testing"
-    description: "Co-création de variantes IA + humaine, tests UX rapides."
-  - title: "Expérimentation"
-    description: "Mise en place des tests, suivi des KPIs et itérations hebdomadaires."
+  - title: "Immersion & promesse"
+    description: "Interviews rapides, analyse concurrents, définition de la proposition de valeur."
+  - title: "Prototypage IA + design"
+    description: "IA génère structures et variations, designers créent une interface immersive."
+  - title: "Mise en ligne & optimisation"
+    description: "Implémentation tracking, QA multi-device, tests A/B, reporting."
 faq:
-  - question: "Pouvez-vous intégrer nos outils d’A/B testing ?"
-    answer: "Oui, nous travaillons avec AB Tasty, Optimizely, Google Optimize alternatives ou vos solutions internes."
-  - question: "Combien de temps dure la mission ?"
-    answer: "Un sprint initial de 6 semaines puis un accompagnement itératif selon vos besoins."
+  - question: "Que couvre le tarif 790€ ?"
+    answer: "Narration, design, développement, intégration CMS/NoCode simple et recette."
+  - question: "Qu’inclut l’option tracking à 190€ ?"
+    answer: "Connexion GA4, pixels ads, events personnalisés, tableaux Looker Studio et alertes email."
+  - question: "Pouvez-vous gérer plusieurs variantes ?"
+    answer: "Oui, chaque variante supplémentaire est facturée 290€ et livrée en 5 jours ouvrés."
 ---
 
-Nous plaçons vos clients au centre : diagnostic data + qualitatif, ideation IA pour générer des hypothèses, et experimentation continue pour maximiser votre taux de conversion.
+## Une landing page qui convertit dès le jour 1
+
+Chaque landing page est pensée comme un mini-entonnoir : storytelling data-driven, preuves sociales, CTA différenciés selon l’étape du parcours. Nos modèles IA génératifs proposent plusieurs angles ; nous choisissons celui qui correspond le mieux à votre audience.
+
+### Notre méthodologie en action
+
+1. **Exploration** : collecte des objections, bénéfices, cas clients.
+2. **Structure IA** : génération de 3 structures alternatives, scoring par IA puis sélection humaine.
+3. **Design & intégration** : maquette glassmorphism, animations micro-interactions, intégration Next.js ou Webflow.
+4. **Optimisation** : plan de tests A/B, recommandations d’itérations, suivi conversions.
+
+### Résultats typiques
+
+- +38% de taux de conversion moyen sur 3 mois.
+- -22% de coût par lead sur les campagnes paid.
+- +45% de temps passé sur la page grâce aux sections interactives.
+
+Confiez-nous vos prochains lancements produits : nous livrons en 7 jours ouvrés.
