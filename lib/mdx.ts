@@ -7,6 +7,7 @@ import readingTime from 'reading-time';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import type { Pluggable } from 'unified';
 
 export type BlogFrontMatter = {
   title: string;
@@ -60,7 +61,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
     options: {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGfm],
+        remarkPlugins: [remarkGfm as unknown as Pluggable],
         rehypePlugins: [[rehypeSlug], [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
       },
     },
