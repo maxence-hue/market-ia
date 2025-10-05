@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased;
+}
+
+a {
+  @apply text-primary underline-offset-4 transition hover:underline;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold text-slate-900 mt-10 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold text-slate-900 mt-8 mb-3;
+}
+
+.prose p {
+  @apply leading-relaxed text-slate-700;
+}
+
+.prose ul {
+  @apply list-disc pl-5 space-y-2;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 space-y-2;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary/40 bg-primary/5 px-4 py-2 italic rounded-r;
+}
+
+.prose pre {
+  @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto;
+}
+
+.prose code {
+  @apply text-sm font-mono bg-slate-800/80 text-slate-100 px-1.5 py-0.5 rounded;
+}
+
+.focus-visible-outline {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+}
