@@ -48,27 +48,27 @@ export default function AboutPage() {
         <Container className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <Badge variant="accent">Manifesto</Badge>
-            <h1 className="mt-4 text-4xl font-bold text-slate-900">L’alliance du cerveau humain et de l’IA, sans compromis</h1>
-            <p className="mt-4 text-base text-slate-600">
+            <h1 className="mt-4 text-4xl font-bold text-white">L’alliance du cerveau humain et de l’IA, sans compromis</h1>
+            <p className="mt-4 text-base text-slate-300">
               Market-IA est née d’un constat : les équipes marketing doivent aller plus vite sans sacrifier la pertinence. Nous avons construit des méthodes où l’IA augmente les experts au lieu de les remplacer.
             </p>
-            <p className="mt-3 text-base text-slate-600">
+            <p className="mt-3 text-base text-slate-300">
               Nos consultants orchestrent des modèles propriétaires, des outils IA de pointe et des process qualité robustes pour livrer des campagnes, contenus et expériences qui performent.
             </p>
           </div>
-          <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-primary/10 via-accent/10 to-white">
-            <Image src="/images/team-collaboration.svg" alt="Équipe Market-IA" fill className="object-cover mix-blend-multiply" />
+          <div className="relative h-80 w-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-primary/40 via-night-800 to-night-900 shadow-[0_40px_80px_-60px_rgba(139,92,246,0.8)]">
+            <Image src="/images/team-collaboration.svg" alt="Équipe Market-IA" fill className="object-cover mix-blend-screen" />
           </div>
         </Container>
       </Section>
       <Section background="muted">
         <Container>
-          <h2 className="text-3xl font-bold text-slate-900">Nos principes</h2>
+          <h2 className="text-3xl font-bold text-white">Nos principes</h2>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             {principles.map((principle) => (
-              <Card key={principle.title} className="bg-white">
-                <h3 className="text-xl font-semibold text-slate-900">{principle.title}</h3>
-                <p className="mt-3 text-sm text-slate-600">{principle.description}</p>
+              <Card key={principle.title}>
+                <h3 className="text-xl font-semibold text-white">{principle.title}</h3>
+                <p className="mt-3 text-sm text-slate-300">{principle.description}</p>
               </Card>
             ))}
           </div>
@@ -77,27 +77,27 @@ export default function AboutPage() {
       <Section>
         <Container className="grid gap-8 lg:grid-cols-2">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900">Une équipe pluridisciplinaire</h2>
-            <p className="mt-4 text-base text-slate-600">
+            <h2 className="text-3xl font-bold text-white">Une équipe pluridisciplinaire</h2>
+            <p className="mt-4 text-base text-slate-300">
               Consultants marketing senior, data strategists, prompt engineers et UX writers travaillent ensemble pour orchestrer vos projets.
             </p>
-            <p className="mt-3 text-base text-slate-600">
+            <p className="mt-3 text-base text-slate-300">
               Nous cultivons une culture d’apprentissage continu : chaque mission nourrit notre base de connaissances IA, partagée avec nos clients.
             </p>
           </div>
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-semibold text-slate-900">Ce qui nous anime</h3>
-            <ul className="mt-4 space-y-3 text-sm text-slate-600">
+          <div className="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-lg shadow-primary/10 backdrop-blur">
+            <h3 className="text-lg font-semibold text-white">Ce qui nous anime</h3>
+            <ul className="mt-4 space-y-3 text-sm text-slate-200">
               <li className="flex items-start gap-2">
-                <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-accent" />
                 Partager des workflows IA responsables et documentés.
               </li>
               <li className="flex items-start gap-2">
-                <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-accent" />
                 Alignement business : chaque livrable est relié à un KPI.
               </li>
               <li className="flex items-start gap-2">
-                <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-accent" />
                 Transmission : nous formons vos équipes à nos méthodes IA.
               </li>
             </ul>

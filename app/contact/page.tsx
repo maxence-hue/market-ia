@@ -26,22 +26,22 @@ export default function ContactPage() {
       <Section>
         <Container className="grid gap-10 lg:grid-cols-[1fr_1fr]">
           <div>
-            <h1 className="text-4xl font-bold text-slate-900">Planifions votre prochain sprint marketing</h1>
-            <p className="mt-4 text-base text-slate-600">
+            <h1 className="text-4xl font-bold text-white">Planifions votre prochain sprint marketing</h1>
+            <p className="mt-4 text-base text-slate-300">
               Remplissez le formulaire et un consultant vous répond sous 24h ouvrées pour organiser un diagnostic gratuit.
             </p>
-            <Card className="mt-6 bg-white">
-              <h2 className="text-lg font-semibold text-slate-900">Nos coordonnées</h2>
-              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+            <Card className="mt-6">
+              <h2 className="text-lg font-semibold text-white">Nos coordonnées</h2>
+              <ul className="mt-4 space-y-3 text-sm text-slate-200">
                 <li>
                   Email :{' '}
-                  <a href={`mailto:${siteConfig.email}`} className="text-primary">
+                  <a href={`mailto:${siteConfig.email}`} className="text-accent">
                     {siteConfig.email}
                   </a>
                 </li>
                 <li>
                   Téléphone :{' '}
-                  <a href={`tel:${siteConfig.telephone}`} className="text-primary">
+                  <a href={`tel:${siteConfig.telephone}`} className="text-accent">
                     {siteConfig.telephone}
                   </a>
                 </li>
@@ -51,9 +51,9 @@ export default function ContactPage() {
               </ul>
             </Card>
           </div>
-          <Card className="bg-white">
-            <h2 className="text-lg font-semibold text-slate-900">Dites-nous tout</h2>
-            <p className="mt-2 text-sm text-slate-600">Plus vous êtes précis, plus nous préparons un diagnostic utile.</p>
+          <Card>
+            <h2 className="text-lg font-semibold text-white">Dites-nous tout</h2>
+            <p className="mt-2 text-sm text-slate-300">Plus vous êtes précis, plus nous préparons un diagnostic utile.</p>
             <div className="mt-6">
               <FormContact />
             </div>

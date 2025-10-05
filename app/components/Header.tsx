@@ -13,17 +13,17 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-night-900/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-xl font-semibold text-dark" aria-label="Accueil Market-IA">
+        <Link href="/" className="text-xl font-semibold text-white" aria-label="Accueil Market-IA">
           Market-IA
         </Link>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 lg:flex" aria-label="Navigation principale">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-slate-200 lg:flex" aria-label="Navigation principale">
           {navigation.main.map((item) => {
             if (item.name === 'Services') {
               return (
                 <Menu as="div" className="relative" key={item.name}>
-                  <Menu.Button className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                  <Menu.Button className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                     Services
                     <ChevronDownIcon className="h-4 w-4" aria-hidden />
                   </Menu.Button>
@@ -36,7 +36,7 @@ export function Header() {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                   >
-                    <Menu.Items className="absolute left-0 mt-3 w-80 rounded-2xl border border-slate-200 bg-white p-3 shadow-lg focus:outline-none">
+                    <Menu.Items className="absolute left-0 mt-3 w-80 rounded-2xl border border-white/10 bg-night-900/95 p-3 shadow-lg backdrop-blur focus:outline-none">
                       <div className="space-y-2">
                         {navigation.services.map((service) => (
                           <Menu.Item key={service.href}>
@@ -45,11 +45,11 @@ export function Header() {
                                 href={service.href}
                                 className={clsx(
                                   'block rounded-xl px-3 py-2 text-sm transition',
-                                  active ? 'bg-primary/10 text-primary' : 'text-slate-700',
+                                  active ? 'bg-primary/20 text-white' : 'text-slate-200',
                                 )}
                               >
                                 <span className="block font-semibold">{service.name}</span>
-                                <span className="mt-1 block text-xs text-slate-500">{service.description}</span>
+                                <span className="mt-1 block text-xs text-slate-400">{service.description}</span>
                               </Link>
                             )}
                           </Menu.Item>
@@ -66,8 +66,8 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={clsx(
-                  'rounded-full px-3 py-2 transition hover:bg-slate-100',
-                  pathname === item.href ? 'bg-primary/10 text-primary' : 'text-slate-700',
+                  'rounded-full px-3 py-2 transition hover:bg-white/10',
+                  pathname === item.href ? 'bg-primary/20 text-white' : 'text-slate-200',
                 )}
               >
                 {item.name}
@@ -78,7 +78,7 @@ export function Header() {
         <div className="hidden lg:flex">
           <Link
             href="/contact"
-            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary/40 transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Demander un devis
           </Link>
@@ -87,7 +87,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="inline-flex items-center justify-center rounded-full p-2 text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="inline-flex items-center justify-center rounded-full p-2 text-slate-100 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             aria-label="Ouvrir le menu"
           >
             <Bars3Icon className="h-6 w-6" aria-hidden />
@@ -118,15 +118,15 @@ export function Header() {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-white px-6 py-6 shadow-xl">
+            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full max-w-sm overflow-y-auto bg-night-900 px-6 py-6 shadow-xl">
               <div className="flex items-center justify-between">
-                <Link href="/" className="text-lg font-semibold text-dark">
+                <Link href="/" className="text-lg font-semibold text-white">
                   Market-IA
                 </Link>
                 <button
                   type="button"
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-full p-2 text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="rounded-full p-2 text-slate-100 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                   aria-label="Fermer le menu"
                 >
                   <XMarkIcon className="h-6 w-6" aria-hidden />
@@ -137,17 +137,17 @@ export function Header() {
                   <div key={item.name}>
                     {item.name === 'Services' ? (
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Services</p>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Services</p>
                         <ul className="mt-3 space-y-3">
                           {navigation.services.map((service) => (
                             <li key={service.href}>
                               <Link
                                 href={service.href}
-                                className="block rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-700 hover:border-primary hover:text-primary"
+                                className="block rounded-xl border border-white/10 px-4 py-3 text-sm text-slate-200 hover:border-primary hover:text-white"
                                 onClick={() => setMobileOpen(false)}
                               >
                                 <span className="block font-semibold">{service.name}</span>
-                                <span className="mt-1 block text-xs text-slate-500">{service.description}</span>
+                                <span className="mt-1 block text-xs text-slate-400">{service.description}</span>
                               </Link>
                             </li>
                           ))}
@@ -156,7 +156,7 @@ export function Header() {
                     ) : (
                       <Link
                         href={item.href}
-                        className="block rounded-full px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+                        className="block rounded-full px-4 py-2 text-sm font-medium text-slate-200 hover:bg-white/10"
                         onClick={() => setMobileOpen(false)}
                       >
                         {item.name}
@@ -169,7 +169,7 @@ export function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-full bg-primary px-4 py-3 text-center text-sm font-semibold text-white transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="block rounded-full bg-primary px-4 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-primary/40 transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   Demander un devis
                 </Link>

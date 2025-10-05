@@ -42,8 +42,8 @@ export default function CaseStudiesPage() {
     <>
       <Section>
         <Container className="max-w-4xl">
-          <h1 className="text-4xl font-bold text-slate-900">Études de cas Market-IA</h1>
-          <p className="mt-4 text-base text-slate-600">
+          <h1 className="text-4xl font-bold text-white">Études de cas Market-IA</h1>
+          <p className="mt-4 text-base text-slate-300">
             Quelques projets récents menés avec notre approche Humain + IA. Contactez-nous pour obtenir les détails chiffrés et méthodologiques.
           </p>
         </Container>
@@ -51,12 +51,12 @@ export default function CaseStudiesPage() {
       <Section className="pt-0">
         <Container className="grid gap-8 lg:grid-cols-3">
           {cases.map((caseStudy) => (
-            <Card key={caseStudy.name} className="bg-white">
-              <h2 className="text-xl font-semibold text-slate-900">{caseStudy.name}</h2>
-              <p className="mt-3 text-sm text-slate-500">Challenge</p>
-              <p className="text-sm text-slate-600">{caseStudy.challenge}</p>
-              <p className="mt-4 text-sm text-slate-500">Résultats</p>
-              <p className="text-sm font-semibold text-slate-900">{caseStudy.result}</p>
+            <Card key={caseStudy.name}>
+              <h2 className="text-xl font-semibold text-white">{caseStudy.name}</h2>
+              <p className="mt-3 text-sm text-slate-300">Challenge</p>
+              <p className="text-sm text-slate-200">{caseStudy.challenge}</p>
+              <p className="mt-4 text-sm text-slate-300">Résultats</p>
+              <p className="text-sm font-semibold text-white">{caseStudy.result}</p>
             </Card>
           ))}
         </Container>

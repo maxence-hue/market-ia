@@ -20,9 +20,9 @@ export function FAQ({ items }: FAQProps) {
       {items.map((item) => (
         <Disclosure key={item.question}>
           {({ open }) => (
-            <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-night-800/60 backdrop-blur">
               <dt>
-                <Disclosure.Button className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                <Disclosure.Button className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-semibold text-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                   <span>{item.question}</span>
                   {open ? (
                     <MinusSmallIcon className="h-5 w-5 text-primary" aria-hidden />
@@ -31,7 +31,7 @@ export function FAQ({ items }: FAQProps) {
                   )}
                 </Disclosure.Button>
               </dt>
-              <Disclosure.Panel as="dd" className="border-t border-slate-100 px-4 py-4 text-sm text-slate-600">
+              <Disclosure.Panel as="dd" className="border-t border-white/5 px-4 py-4 text-sm text-slate-300">
                 {item.answer}
               </Disclosure.Panel>
             </div>

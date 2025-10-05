@@ -8,9 +8,14 @@ const config = {
   theme: {
     extend: {
       colors: {
-        primary: '#1A56DB',
-        accent: '#0EA5E9',
-        dark: '#0F172A',
+        primary: '#8B5CF6',
+        accent: '#22D3EE',
+        dark: '#050014',
+        night: {
+          900: '#050014',
+          800: '#0B0320',
+          700: '#15093C',
+        },
       },
       fontFamily: {
         sans: ['"Inter var"', ...fontFamily.sans],

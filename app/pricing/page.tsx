@@ -71,8 +71,8 @@ export default function PricingPage() {
     <>
       <Section>
         <Container className="max-w-4xl text-center">
-          <h1 className="text-4xl font-bold text-slate-900">Plans transparents, valeur maximale</h1>
-          <p className="mt-4 text-base text-slate-600">
+          <h1 className="text-4xl font-bold text-white">Plans transparents, valeur maximale</h1>
+          <p className="mt-4 text-base text-slate-300">
             Choisissez l’intensité qui correspond à vos objectifs. Chaque plan inclut un accompagnement humain senior et des workflows IA documentés.
           </p>
         </Container>
@@ -84,8 +84,8 @@ export default function PricingPage() {
       </Section>
       <Section background="muted">
         <Container className="max-w-3xl">
-          <h2 className="text-3xl font-bold text-slate-900">FAQ</h2>
-          <p className="mt-3 text-base text-slate-600">
+          <h2 className="text-3xl font-bold text-white">FAQ</h2>
+          <p className="mt-3 text-base text-slate-300">
             Nos réponses aux questions les plus fréquentes sur nos offres et modalités de collaboration.
           </p>
           <div className="mt-8">

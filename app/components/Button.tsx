@@ -14,11 +14,11 @@ const sizeClasses = {
 
 const variantClasses = {
   primary:
-    'bg-primary text-white shadow-subtle hover:bg-primary/90 focus-visible:outline-primary disabled:bg-primary/40 disabled:cursor-not-allowed',
+    'bg-primary text-white shadow-lg shadow-primary/40 hover:bg-primary/90 focus-visible:outline-primary disabled:bg-primary/40 disabled:cursor-not-allowed',
   secondary:
-    'bg-white text-primary border border-primary/20 hover:border-primary focus-visible:outline-primary disabled:opacity-60 disabled:cursor-not-allowed',
+    'border border-white/20 bg-white/10 text-white hover:border-primary/60 hover:bg-primary/10 focus-visible:outline-primary disabled:opacity-60 disabled:cursor-not-allowed',
   ghost:
-    'bg-transparent text-slate-900 hover:bg-slate-100 focus-visible:outline-primary disabled:opacity-60 disabled:cursor-not-allowed',
+    'bg-transparent text-slate-200 hover:bg-white/10 focus-visible:outline-primary disabled:opacity-60 disabled:cursor-not-allowed',
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

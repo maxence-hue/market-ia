@@ -59,13 +59,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <Section className="pb-0">
         <Container className="max-w-4xl space-y-6">
           <Badge variant="accent">{service.hero}</Badge>
-          <h1 className="text-4xl font-bold text-slate-900">{service.title}</h1>
-          <p className="text-base text-slate-600">{service.excerpt}</p>
+          <h1 className="text-4xl font-bold text-white">{service.title}</h1>
+          <p className="text-base text-slate-300">{service.excerpt}</p>
         </Container>
       </Section>
       <Section className="pt-0">
         <Container className="grid gap-10 lg:grid-cols-[2fr_1fr]">
-          <div className="prose prose-slate max-w-none">
+          <div className="prose max-w-none">
             <ReactMarkdown>{service.body}</ReactMarkdown>
             <h2>Bénéfices clés</h2>
             <ul>
@@ -85,25 +85,25 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </ol>
           </div>
           <aside className="space-y-6">
-            <Card className="bg-white">
-              <h2 className="text-lg font-semibold text-slate-900">Livrables types</h2>
-              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+            <Card>
+              <h2 className="text-lg font-semibold text-white">Livrables types</h2>
+              <ul className="mt-4 space-y-2 text-sm text-slate-200">
                 {service.deliverables.map((deliverable) => (
                   <li key={deliverable} className="flex items-start gap-2">
-                    <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                    <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-accent" />
                     {deliverable}
                   </li>
                 ))}
               </ul>
             </Card>
-            <Card className="bg-white">
-              <h2 className="text-lg font-semibold text-slate-900">Pourquoi Market-IA ?</h2>
-              <p className="mt-3 text-sm text-slate-600">
+            <Card>
+              <h2 className="text-lg font-semibold text-white">Pourquoi Market-IA ?</h2>
+              <p className="mt-3 text-sm text-slate-300">
                 Nos consultants orchestrent des modèles IA documentés, entraînés sur votre contexte, avec des garde-fous qualité.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="mt-6 inline-flex items-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Discuter de ce service
               </Link>

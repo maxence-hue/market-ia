@@ -39,15 +39,15 @@ export function TOC({ headings }: TOCProps) {
   if (headings.length === 0) return null;
 
   return (
-    <nav aria-label="Table des matières" className="sticky top-24 hidden h-max w-64 shrink-0 border-l border-slate-200 pl-6 lg:block">
-      <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">Sommaire</p>
+    <nav aria-label="Table des matières" className="sticky top-24 hidden h-max w-64 shrink-0 border-l border-white/10 pl-6 lg:block">
+      <p className="text-sm font-semibold uppercase tracking-wide text-slate-300">Sommaire</p>
       <ul className="mt-4 space-y-2 text-sm">
         {headings.map((heading) => (
           <li key={heading.id} style={{ marginLeft: (heading.level - 2) * 12 }}>
             <a
               href={`#${heading.id}`}
-              className={`block rounded-md px-2 py-1 transition hover:bg-primary/10 hover:text-primary ${
-                activeId === heading.id ? 'bg-primary/10 font-semibold text-primary' : 'text-slate-600'
+              className={`block rounded-md px-2 py-1 transition hover:bg-primary/20 hover:text-white ${
+                activeId === heading.id ? 'bg-primary/20 font-semibold text-white shadow-lg shadow-primary/20' : 'text-slate-300'
               }`}
             >
               {heading.text}

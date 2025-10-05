@@ -77,9 +77,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     <>
       <Section className="pb-0">
         <Container className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-wide text-primary">{new Date(post.frontMatter.date).toLocaleDateString('fr-FR')}</p>
-          <h1 className="mt-4 text-4xl font-bold text-slate-900">{post.frontMatter.title}</h1>
-          <div className="mt-3 flex flex-wrap gap-3 text-sm text-slate-500">
+          <p className="text-xs font-semibold uppercase tracking-wide text-accent">{new Date(post.frontMatter.date).toLocaleDateString('fr-FR')}</p>
+          <h1 className="mt-4 text-4xl font-bold text-white">{post.frontMatter.title}</h1>
+          <div className="mt-3 flex flex-wrap gap-3 text-sm text-slate-300">
             <span>Par {post.frontMatter.author}</span>
             <span>•</span>
             <span>{post.readingTime} min de lecture</span>
@@ -88,14 +88,14 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       </Section>
       <Section className="pt-0">
         <Container className="flex gap-12">
-          <article className="prose prose-slate max-w-none flex-1">
+          <article className="prose max-w-none flex-1">
             {post.content}
-            <div className="mt-12 rounded-2xl bg-primary/10 p-6 text-slate-800">
-              <h2 className="text-lg font-semibold">Aller plus loin</h2>
-              <p className="mt-3 text-sm">
+            <div className="mt-12 rounded-2xl border border-white/10 bg-white/10 p-6 text-slate-200 shadow-lg shadow-primary/10">
+              <h2 className="text-lg font-semibold text-white">Aller plus loin</h2>
+              <p className="mt-3 text-sm text-slate-200">
                 Parlons de la mise en œuvre de ces tactiques pour votre organisation.
               </p>
-              <Link href="/contact" className="mt-4 inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary/90">
+              <Link href="/contact" className="mt-4 inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90">
                 Demander un diagnostic
               </Link>
             </div>
@@ -105,8 +105,8 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       </Section>
       <Section background="muted">
         <Container className="max-w-3xl text-center">
-          <h2 className="text-2xl font-semibold text-slate-900">S’abonner à Market-IA Insights</h2>
-          <p className="mt-3 text-sm text-slate-600">
+          <h2 className="text-2xl font-semibold text-white">S’abonner à Market-IA Insights</h2>
+          <p className="mt-3 text-sm text-slate-300">
             Recevez les prochains articles et frameworks IA dans votre boîte mail.
           </p>
           <form className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
@@ -117,11 +117,11 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               id="article-email"
               type="email"
               placeholder="Votre email professionnel"
-              className="w-full rounded-full border border-slate-200 px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-72"
+              className="w-full rounded-full border border-white/10 bg-night-800/80 px-4 py-2 text-sm text-white placeholder:text-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-72"
             />
             <button
               type="button"
-              className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               S’abonner
             </button>

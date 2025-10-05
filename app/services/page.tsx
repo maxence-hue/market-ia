@@ -41,8 +41,8 @@ export default async function ServicesPage() {
       <Section className="pb-0">
         <Container className="max-w-4xl">
           <Badge variant="accent">Nos expertises</Badge>
-          <h1 className="mt-4 text-4xl font-bold text-slate-900">Services marketing augmentés par l’IA</h1>
-          <p className="mt-4 text-base text-slate-600">
+          <h1 className="mt-4 text-4xl font-bold text-white">Services marketing augmentés par l’IA</h1>
+          <p className="mt-4 text-base text-slate-300">
             Des offres conçues pour accélérer chaque pilier de votre acquisition : stratégie, contenus, activation et conversion.
           </p>
         </Container>
@@ -52,21 +52,21 @@ export default async function ServicesPage() {
           {services.map((service) => (
             <Card key={service.slug} className="flex h-full flex-col justify-between">
               <div>
-                <h2 className="text-2xl font-semibold text-slate-900">{service.title}</h2>
-                <p className="mt-3 text-sm text-slate-600">{service.excerpt}</p>
-                <ul className="mt-6 space-y-2 text-sm text-slate-600">
+                <h2 className="text-2xl font-semibold text-white">{service.title}</h2>
+                <p className="mt-3 text-sm text-slate-300">{service.excerpt}</p>
+                <ul className="mt-6 space-y-2 text-sm text-slate-200">
                   {service.benefits.slice(0, 3).map((benefit) => (
                     <li key={benefit.title} className="flex items-start gap-2">
-                      <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-primary" />
+                      <span aria-hidden className="mt-1 h-2 w-2 rounded-full bg-accent" />
                       <div>
-                        <p className="font-semibold text-slate-900">{benefit.title}</p>
-                        <p className="text-slate-600">{benefit.description}</p>
+                        <p className="font-semibold text-white">{benefit.title}</p>
+                        <p className="text-slate-300">{benefit.description}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
               </div>
-              <Link href={`/services/${service.slug}`} className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+              <Link href={`/services/${service.slug}`} className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent">
                 Détails de l’offre
                 <ArrowRightIcon className="h-4 w-4" aria-hidden />
               </Link>

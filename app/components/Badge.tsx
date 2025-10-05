@@ -5,9 +5,9 @@ type BadgeProps = React.HTMLAttributes<HTMLSpanElement> & {
 };
 
 const variants = {
-  primary: 'bg-primary/10 text-primary border border-primary/20',
-  accent: 'bg-accent/10 text-accent border border-accent/20',
-  neutral: 'bg-slate-200 text-slate-700 border border-slate-300',
+  primary: 'border border-primary/30 bg-primary/20 text-white shadow-lg shadow-primary/20',
+  accent: 'border border-accent/30 bg-accent/20 text-white shadow-lg shadow-accent/10',
+  neutral: 'border border-white/10 bg-white/10 text-slate-200',
 } satisfies Record<NonNullable<BadgeProps['variant']>, string>;
 
 export function Badge({ className, variant = 'primary', ...props }: BadgeProps) {

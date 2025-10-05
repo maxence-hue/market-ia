@@ -75,7 +75,7 @@ export function FormContact() {
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-slate-700">
+          <label htmlFor="name" className="block text-sm font-semibold text-slate-200">
             Nom complet
           </label>
           <input
@@ -84,18 +84,18 @@ export function FormContact() {
             type="text"
             autoComplete="name"
             required
-            className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-night-800/70 px-4 py-2 text-sm text-white placeholder:text-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             aria-invalid={Boolean(state.errors.name)}
             aria-describedby={state.errors.name ? 'name-error' : undefined}
           />
           {state.errors.name ? (
-            <p id="name-error" className="mt-1 text-sm text-red-600">
+            <p id="name-error" className="mt-1 text-sm text-red-300">
               {state.errors.name}
             </p>
           ) : null}
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-slate-700">
+          <label htmlFor="email" className="block text-sm font-semibold text-slate-200">
             Email professionnel
           </label>
           <input
@@ -104,35 +104,35 @@ export function FormContact() {
             type="email"
             autoComplete="email"
             required
-            className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-night-800/70 px-4 py-2 text-sm text-white placeholder:text-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             aria-invalid={Boolean(state.errors.email)}
             aria-describedby={state.errors.email ? 'email-error' : undefined}
           />
           {state.errors.email ? (
-            <p id="email-error" className="mt-1 text-sm text-red-600">
+            <p id="email-error" className="mt-1 text-sm text-red-300">
               {state.errors.email}
             </p>
           ) : null}
         </div>
         <div>
-          <label htmlFor="company" className="block text-sm font-semibold text-slate-700">
+          <label htmlFor="company" className="block text-sm font-semibold text-slate-200">
             Entreprise
           </label>
           <input
             id="company"
             name="company"
             type="text"
-            className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-night-800/70 px-4 py-2 text-sm text-white placeholder:text-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           />
         </div>
         <div>
-          <label htmlFor="budget" className="block text-sm font-semibold text-slate-700">
+          <label htmlFor="budget" className="block text-sm font-semibold text-slate-200">
             Budget mensuel estimé
           </label>
           <select
             id="budget"
             name="budget"
-            className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="mt-2 w-full rounded-xl border border-white/10 bg-night-800/70 px-4 py-2 text-sm text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             defaultValue=""
           >
             <option value="" disabled>
@@ -146,7 +146,7 @@ export function FormContact() {
         </div>
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-slate-700">
+        <label htmlFor="message" className="block text-sm font-semibold text-slate-200">
           Votre besoin
         </label>
         <textarea
@@ -154,12 +154,12 @@ export function FormContact() {
           name="message"
           rows={5}
           required
-          className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          className="mt-2 w-full rounded-xl border border-white/10 bg-night-800/70 px-4 py-2 text-sm text-white placeholder:text-slate-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           aria-invalid={Boolean(state.errors.message)}
           aria-describedby={state.errors.message ? 'message-error' : undefined}
         />
         {state.errors.message ? (
-          <p id="message-error" className="mt-1 text-sm text-red-600">
+          <p id="message-error" className="mt-1 text-sm text-red-300">
             {state.errors.message}
           </p>
         ) : null}
@@ -169,24 +169,24 @@ export function FormContact() {
           id="consent"
           name="consent"
           type="checkbox"
-          className="mt-1 h-4 w-4 rounded border-slate-300 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          className="mt-1 h-4 w-4 rounded border-white/20 bg-night-900 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           aria-invalid={Boolean(state.errors.consent)}
           aria-describedby={state.errors.consent ? 'consent-error' : undefined}
         />
-        <label htmlFor="consent" className="text-sm text-slate-600">
+        <label htmlFor="consent" className="text-sm text-slate-300">
           J&apos;accepte que Market-IA me contacte et j&apos;ai lu la politique de confidentialité.
         </label>
       </div>
       {state.errors.consent ? (
-        <p id="consent-error" className="text-sm text-red-600">
+        <p id="consent-error" className="text-sm text-red-300">
           {state.errors.consent}
         </p>
       ) : null}
       {state.status === 'success' && state.message ? (
-        <p className="rounded-xl bg-green-50 px-4 py-3 text-sm text-green-700">{state.message}</p>
+        <p className="rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">{state.message}</p>
       ) : null}
       {state.status !== 'success' && state.message ? (
-        <p className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">{state.message}</p>
+        <p className="rounded-xl border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200">{state.message}</p>
       ) : null}
       <Button type="submit" disabled={state.status === 'submitting'}>
         {state.status === 'submitting' ? 'Envoi en cours...' : 'Envoyer ma demande'}
